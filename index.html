@@ -66,12 +66,10 @@
             if (minutes < 0 || seconds < 0) {
                 document.getElementById('error').innerHTML = "マイナスは入力できません";
                 document.getElementById('error').classList.remove('hidden');
-                document.getElementById('start').classList.add('hidden');
                 return;
             }
 
             document.getElementById('error').classList.add('hidden');
-            document.getElementById('start').classList.remove('hidden');
             document.getElementById('timer').innerText = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
         }
 
